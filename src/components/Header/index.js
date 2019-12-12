@@ -5,9 +5,9 @@ import { Nav } from './styled';
 
 export default function Header() {
   return (
-    <Nav>
+    <Nav error={1}>
       <Link to="/">Home</Link>
-      <Link to="/test">Test</Link>
+      <Link to="/page404">Page404</Link>
     </Nav>
   );
 }
