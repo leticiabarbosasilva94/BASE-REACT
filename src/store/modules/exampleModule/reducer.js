@@ -1,4 +1,4 @@
-import { EXAMPLE_TYPE_REQUEST, EXAMPLE_TYPE_SUCCESS } from './types';
+import * as types from './types';
 
 const initialState = {};
 
@@ -6,12 +6,12 @@ const initialState = {};
 // eslint-disable-next-line no-unused-vars
 export default function exampleReducer(state = initialState, action) {
   switch (action.type) {
-    case EXAMPLE_TYPE_REQUEST: {
+    case types.EXAMPLE_TYPE_REQUEST: {
       // Do what you need
       return state;
     }
 
-    case EXAMPLE_TYPE_SUCCESS: {
+    case types.EXAMPLE_TYPE_SUCCESS: {
       // Do what you need
       return state;
     }

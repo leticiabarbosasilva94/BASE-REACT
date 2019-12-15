@@ -1,6 +1,6 @@
 import { call, put, takeLatest, all } from 'redux-saga/effects';
 import { exampleActionSuccess } from './actions';
-import { EXAMPLE_TYPE_REQUEST } from './types';
+import * as types from './types';
 
 function youDontNeedMe(msg = 'Hello') {
   return new Promise(resolve => {
@@ -15,4 +15,6 @@ function* exampleSagaRequest({ exampleData }) {
   yield put(exampleActionSuccess(response));
 }
 
-export default all([takeLatest(EXAMPLE_TYPE_REQUEST, exampleSagaRequest)]);
+export default all([
+  takeLatest(types.EXAMPLE_TYPE_REQUEST, exampleSagaRequest)
+]);
