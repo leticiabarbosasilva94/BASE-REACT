@@ -1,6 +1,6 @@
 import { call, put, takeLatest, all } from 'redux-saga/effects';
 import { exampleActionSuccess } from './actions';
-import * as types from './types';
+import * as types from '../types';
 
 function youDontNeedMe(msg = 'Hello') {
   return new Promise(resolve => {
