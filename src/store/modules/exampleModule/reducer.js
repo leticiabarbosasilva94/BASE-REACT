@@ -16,6 +16,14 @@ export default function exampleReducer(state = initialState, action) {
       return state;
     }
 
+    case types.PERSIST_PERSIST: {
+      return state;
+    }
+
+    case types.PERSIST_REHYDRATE: {
+      return state;
+    }
+
     default: {
       return state;
     }
