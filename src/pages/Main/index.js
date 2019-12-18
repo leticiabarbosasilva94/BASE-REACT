@@ -4,14 +4,16 @@ import { toast } from 'react-toastify';
 
 import { Title } from './styled';
 
-// Saga
-import * as exampleRequest from '../../store/modules/exampleModule/actions';
+// Sagas
+import * as exampleActions from '../../store/modules/exampleModule/actions';
+import * as authActions from '../../store/modules/auth/actions';
 
 export default function Main() {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    dispatch(exampleRequest.exampleActionRequest('HEYYYYYYYYYYY'));
+    dispatch(exampleActions.exampleActionRequest('HEYYYYYYYYYYY'));
+    dispatch(authActions.logInRequest('Auth test'));
   }, [dispatch]);
 
   toast.success('Pretty cool message!!!');

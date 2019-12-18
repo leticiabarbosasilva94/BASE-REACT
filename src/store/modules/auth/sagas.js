@@ -10,11 +10,9 @@ function youDontNeedMe(msg = 'Hello') {
   });
 }
 
-function* exampleSagaRequest({ exampleData }) {
+function* loginRequest({ exampleData }) {
   const response = yield call(youDontNeedMe, exampleData);
-  yield put(actions.registerSuccess(response));
+  yield put(actions.loginSuccess(response));
 }
 
-export default all([
-  takeLatest(types.EXAMPLE_TYPE_REQUEST, exampleSagaRequest)
-]);
+export default all([takeLatest(types.LOGIN_REQUEST, loginRequest)]);

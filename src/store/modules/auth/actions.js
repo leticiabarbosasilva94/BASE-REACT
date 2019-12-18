@@ -20,3 +20,10 @@ export function logInRequest(someData) {
     exampleData: someData
   };
 }
+
+export function loginSuccess(someData) {
+  return {
+    type: types.LOGIN_SUCCESS,
+    exampleData: someData
+  };
+}
