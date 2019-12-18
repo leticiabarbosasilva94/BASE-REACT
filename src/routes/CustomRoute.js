@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -9,7 +10,7 @@ export default function CustomRoute({
 }) {
   // Add isClosed to private routes and change isLoggedIn
   // to true to allow access
-  const isLoggedIn = true;
+  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
   if (isClosed && !isLoggedIn) return <Redirect to="/login" />;
 

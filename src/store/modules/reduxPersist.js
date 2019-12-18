@@ -6,7 +6,7 @@ export default reducers => {
     {
       key: 'NOME-DA-APLICACAO',
       storage,
-      whitelist: ['example']
+      whitelist: ['example', 'auth']
     },
     reducers
   );
