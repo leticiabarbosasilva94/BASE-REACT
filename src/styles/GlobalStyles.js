@@ -16,4 +16,13 @@ export default createGlobalStyle`
   html, body, #root {
     height: 100%;
   }
+
+  /* Toastify */
+  body .Toastify .Toastify__toast-container .Toastify__toast-container {}
+  body .Toastify .Toastify__toast-container .Toastify__toast {}
+  body .Toastify .Toastify__toast-container .Toastify__toast--error {}
+  body .Toastify .Toastify__toast-container .Toastify__toast--warning {}
+  body .Toastify .Toastify__toast-container .Toastify__toast--success {}
+  body .Toastify .Toastify__toast-container .Toastify__toast-body {}
+  body .Toastify .Toastify__toast-container .Toastify__progress-bar {}
 `;
