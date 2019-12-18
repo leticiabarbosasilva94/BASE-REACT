@@ -7,6 +7,13 @@ export function registerRequest(someData) {
   };
 }
 
+export function registerSuccess(someData) {
+  return {
+    type: types.REGISTER_SUCCESS,
+    exampleData: someData
+  };
+}
+
 export function logInRequest(someData) {
   return {
     type: types.LOGIN_REQUEST,

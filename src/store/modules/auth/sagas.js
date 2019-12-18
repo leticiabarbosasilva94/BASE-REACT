@@ -12,7 +12,7 @@ function youDontNeedMe(msg = 'Hello') {
 
 function* exampleSagaRequest({ exampleData }) {
   const response = yield call(youDontNeedMe, exampleData);
-  yield put(actions.exampleActionSuccess(response));
+  yield put(actions.registerSuccess(response));
 }
 
 export default all([
