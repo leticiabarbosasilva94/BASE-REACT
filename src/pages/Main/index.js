@@ -12,6 +12,10 @@ export default function Main() {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
+    document.title = 'Main';
+  }, []);
+
+  React.useEffect(() => {
     dispatch(exampleActions.exampleActionRequest('HEYYYYYYYYYYY'));
     dispatch(authActions.logInRequest('Auth test'));
   }, [dispatch]);

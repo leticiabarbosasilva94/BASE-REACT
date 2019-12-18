@@ -2,6 +2,10 @@ import React from 'react';
 import { Main } from './styled';
 
 export default function Page404() {
+  React.useEffect(() => {
+    document.title = 'Erro 404';
+  }, []);
+
   return (
     <Main>
       <h1>404</h1>
